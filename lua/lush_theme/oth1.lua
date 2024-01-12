@@ -150,7 +150,7 @@ local theme = lush(function(injected_functions)
 		Identifier({ fg = hsl("#4cc9f0") }), -- (*) Any variable name
 		Function({ fg = hsl("#5e0055") }), --   Function name (also: methods for classes)
 
-		Statement({ fg = hsl("#a594f9") }), -- (*) Any statement
+		Statement({ fg = hsl("#ef6295") }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
