@@ -62,7 +62,7 @@ local theme = lush(function(injected_functions)
 		-- See :h highlight-groups
 		--
 		ColorColumn({ bg = hsl("#fed9b7") }), -- Columns set with 'colorcolumn'
-		-- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
+		Conceal({ bg = hsl("#ffe5ec"), fg = hsl("#ff8fab") }), -- Placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor({ bg = hsl("#f8f7ff"), fg = hsl("#9381ff") }), -- Character under the cursor
 		-- CurSearch({  }), -- Highlighting a search pattern under the cursor (see 'hlsearch')
 		-- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -199,7 +199,7 @@ local theme = lush(function(injected_functions)
 		-- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
 		--
 		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticWarn({ fg = hsl("#b9375e") }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticInfo({ fg = hsl("#006466") }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticHint             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticOk               { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
