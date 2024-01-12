@@ -84,14 +84,14 @@ local theme = lush(function(injected_functions)
 		-- SignColumn     { }, -- Column where |signs| are displayed
 		-- IncSearch      { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		Substitute({ bg = hsl("#fcf6bd") }), -- |:substitute| replacement text highlighting
-		LineNr({ fg = "#ffffff" }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr({ fg = hsl("#ffffff") }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		LineNrAbove({ LineNr, gui = "italic" }), -- Line number for when the 'relativenumber' option is set, above the cursor line
 		LineNrBelow({ LineNrAbove }), -- Line number for when the 'relativenumber' option is set, below the cursor line
 		CursorLineNr({ fg = hsl("#60b6fb") }), -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		-- ModeMsg({ bg = "#9a031e" }), -- 'showmode' message (e.g., "-- INSERT -- ")
+		-- ModeMsg({ bg = hsl("#8a031e") }), -- 'showmode' message (e.g., "-- INSERT -- ")
 		MsgArea({ fg = hsl("#000000"), bg = hsl("#ffffff") }), -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
@@ -112,7 +112,7 @@ local theme = lush(function(injected_functions)
 		-- Question       { }, -- |hit-enter| prompt and yes/no questions
 		-- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		Search({ bg = hsl("#fcf6bd"), fg = hsl("#ff99c8") }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-		SpecialKey({ fg = hsl("#aacc00") }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+		-- SpecialKey({ fg = hsl("#cacc00") }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		-- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		-- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -139,14 +139,12 @@ local theme = lush(function(injected_functions)
 		-- See :h group-name
 		--
 		-- Uncomment and edit if you want more specific syntax highlighting.
-
-		Comment({ fg = "#b5838d" }), -- Any comment
-
-		-- Constant       { }, -- (*) Any constant
+		Comment({ fg = hsl("#b5838d") }), -- Any comment
+		Constant({ fg = hsl("#ffffff") }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
-		-- Number         { }, --   A number constant: 234, 0xff
-		-- Boolean        { }, --   A boolean constant: TRUE, false
+		Number({ fg = hsl("#ff299c") }), --   A number constant: 234, 0xff
+		Boolean({ fg = hsl("#ff299c") }), --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
 		Identifier({ fg = hsl("#4cc9f0") }), -- (*) Any variable name
