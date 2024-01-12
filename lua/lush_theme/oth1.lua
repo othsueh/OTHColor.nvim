@@ -69,12 +69,12 @@ local theme = lush(function(injected_functions)
 		-- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
 		CursorColumn({ bg = hsl("#fed9b7") }), -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		CursorLine({ bg = hsl("#f8f7ff") }), -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-		-- Directory      { }, -- Directory names (and other special names in listings)
+		Directory({ fg = hsl("#ffffff") }), -- Directory names (and other special names in listings)
 		DiffAdd({ bg = hsl("#b4ffff") }), -- Diff mode: Added line |diff.txt|
 		DiffChange({ bg = hsl("#fbe300") }), -- Diff mode: Changed line |diff.txt|
 		-- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
 		-- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
-		-- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+		EndOfBuffer({ fg = hsl("#6930c3") }), -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		-- TermCursor     { }, -- Cursor in a focused terminal
 		-- TermCursorNC   { }, -- Cursor in an unfocused terminal
 		ErrorMsg({ fg = hsl("#ff0000") }), -- Error messages on the command line
