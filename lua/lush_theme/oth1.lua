@@ -140,7 +140,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- Uncomment and edit if you want more specific syntax highlighting.
 		Comment({ fg = hsl("#b5838d") }), -- Any comment
-		Constant({ fg = hsl("#ffffff") }), -- (*) Any constant
+		Constant({ fg = hsl("#f89b29") }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		Number({ fg = hsl("#ff299c") }), --   A number constant: 234, 0xff
@@ -164,7 +164,7 @@ local theme = lush(function(injected_functions)
 		-- Macro          { }, --   Same as Define
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-		Type({ fg = "#ff4d6d" }), -- (*) int, long, char, etc.
+		Type({ fg = hsl("#8013bd") }), -- (*) int, long, char, etc.
 		-- StorageClass   { }, --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
