@@ -97,7 +97,7 @@ local theme = lush(function(injected_functions)
 		-- MoreMsg        { }, -- |more-prompt|
 		-- NonText({}), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ bg = hsl("#efcfe3"), fg = hsl("#4d194d") }), -- Normal text
-		NormalFloat({ Normal }), -- Normal text in floating windows.
+		NormalFloat({ bg = Normal.bg.li(20) }), -- Normal text in floating windows.
 		-- FloatBorder    {bg="#522888" }, -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
@@ -119,7 +119,7 @@ local theme = lush(function(injected_functions)
 		-- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 		StatusLine({ bg = hsl("#47026c") }), -- Status line of current window
 		-- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		TabLine({ bg = "#ffe5ec", fg = "#fb6f92" }), -- Tab pages line, not active tab page label
+		TabLine({ bg = hsl("#ffe5ec"), fg = hsl("#fb6f92") }), -- Tab pages line, not active tab page label
 		-- TabLineFill    { }, -- Tab pages line, where there are no labels
 		-- TabLineSel     { }, -- Tab pages line, active tab page label
 		-- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
@@ -140,7 +140,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- Uncomment and edit if you want more specific syntax highlighting.
 		Comment({ fg = hsl("#b5838d") }), -- Any comment
-		Constant({ fg = hsl("#f09caf") }), -- (*) Any constant
+		Constant({ fg = Normal.bg.da(30) }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		Number({ fg = hsl("#ff299c") }), --   A number constant: 234, 0xff
@@ -169,7 +169,7 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		Special({ fg = hsl("#b892ff") }), -- (*) Any special symbol
+		Special({ fg = hsl("#b892ff"), gui = "bold" }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
