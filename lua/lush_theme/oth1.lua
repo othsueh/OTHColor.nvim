@@ -140,7 +140,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- Uncomment and edit if you want more specific syntax highlighting.
 		Comment({ fg = hsl("#b5838d") }), -- Any comment
-		Constant({ fg = hsl("#f89b29") }), -- (*) Any constant
+		Constant({ fg = hsl("#f09caf") }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		Number({ fg = hsl("#ff299c") }), --   A number constant: 234, 0xff
@@ -148,7 +148,7 @@ local theme = lush(function(injected_functions)
 		-- Float          { }, --   A floating point constant: 2.3e10
 
 		Identifier({ fg = hsl("#4cc9f0") }), -- (*) Any variable name
-		Function({ fg = hsl("#3f88c5") }), --   Function name (also: methods for classes)
+		Function({ fg = hsl("#5e0055") }), --   Function name (also: methods for classes)
 
 		Statement({ fg = hsl("#a594f9") }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
@@ -158,13 +158,13 @@ local theme = lush(function(injected_functions)
 		-- Keyword        { }, --   any other keyword
 		-- Exception      { }, --   try, catch, throw
 
-		-- PreProc        { }, -- (*) Generic Preprocessor
+		PreProc({ fg = hsl("#ffffff") }), -- (*) Generic Preprocessor
 		-- Include        { }, --   Preprocessor #include
 		-- Define         { }, --   Preprocessor #define
 		-- Macro          { }, --   Same as Define
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-		Type({ fg = hsl("#8013bd") }), -- (*) int, long, char, etc.
+		Type({ fg = hsl("#af5dff") }), -- (*) int, long, char, etc.
 		-- StorageClass   { }, --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
