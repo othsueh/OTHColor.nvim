@@ -255,21 +255,21 @@ local theme = lush(function(injected_functions)
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
 		-- sym"@string"            { }, -- String
-		-- sym"@string.escape"     { }, -- SpecialChar
-		-- sym"@string.special"    { }, -- SpecialChar
+		sym("@string.escape")({ fg = hsl("#b9375e") }), -- SpecialChar
+		sym("@string.special")({ fg = hsl("#b9375e") }), -- SpecialChar
 		-- sym"@character"         { }, -- Character
 		-- sym"@character.special" { }, -- SpecialChar
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
 		-- sym"@function"          { }, -- Function
-		-- sym"@function.builtin"  { }, -- Special
+		sym("@function.builtin")({ fg = hsl("#b9375e") }), -- Special
 		-- sym"@function.macro"    { }, -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
 		-- sym"@property"          { }, -- Identifier
-		-- sym"@constructor"       { }, -- Special
+		sym("@constructor")({ fg = hsl("#b9375e") }), -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
 		-- sym"@label"             { }, -- Label
