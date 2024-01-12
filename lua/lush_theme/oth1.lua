@@ -171,11 +171,11 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		-- Special        { }, -- (*) Any special symbol
+		Special({ fg = hsl("#b9375e") }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
 		Delimiter({ fg = hsl("#b9375e") }), --   Character that needs attention
-		SpecialComment({ fg = hsl("#b9375e") }), --   Special things inside a comment (e.g. '\n')
+		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
