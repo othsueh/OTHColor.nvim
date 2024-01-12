@@ -150,7 +150,7 @@ local theme = lush(function(injected_functions)
 		Identifier({ fg = hsl("#4cc9f0") }), -- (*) Any variable name
 		Function({ fg = hsl("#5e0055") }), --   Function name (also: methods for classes)
 
-		Statement({ fg = hsl("#ef6295") }), -- (*) Any statement
+		Statement({ fg = hsl("#ef6295"), gui = "bold" }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
@@ -158,7 +158,7 @@ local theme = lush(function(injected_functions)
 		-- Keyword        { }, --   any other keyword
 		-- Exception      { }, --   try, catch, throw
 
-		PreProc({ fg = hsl("#f49cbb") }), -- (*) Generic Preprocessor
+		PreProc({ fg = hsl("#f49cbb"), gui = "bold" }), -- (*) Generic Preprocessor
 		-- Include        { }, --   Preprocessor #include
 		-- Define         { }, --   Preprocessor #define
 		-- Macro          { }, --   Same as Define
