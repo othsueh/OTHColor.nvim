@@ -61,38 +61,38 @@ local theme = lush(function(injected_functions)
 		--
 		-- See :h highlight-groups
 		--
-		ColorColumn({ bg = "#fed9b7" }), -- Columns set with 'colorcolumn'
+		ColorColumn({ bg = hsl("#fed9b7") }), -- Columns set with 'colorcolumn'
 		-- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor({ bg = hsl("#f8f7ff"), fg = hsl("#9381ff") }), -- Character under the cursor
 		-- CurSearch({  }), -- Highlighting a search pattern under the cursor (see 'hlsearch')
 		-- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
-		CursorColumn({ bg = "#fed9b7" }), -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		CursorLine({ bg = "#f8f7ff" }), -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+		CursorColumn({ bg = hsl("#fed9b7") }), -- Screen-column at the cursor, when 'cursorcolumn' is set.
+		CursorLine({ bg = hsl("#f8f7ff") }), -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
 		-- Directory      { }, -- Directory names (and other special names in listings)
-		DiffAdd({ bg = "#b4ffff" }), -- Diff mode: Added line |diff.txt|
-		DiffChange({ bg = "#fbe300" }), -- Diff mode: Changed line |diff.txt|
+		DiffAdd({ bg = hsl("#b4ffff") }), -- Diff mode: Added line |diff.txt|
+		DiffChange({ bg = hsl("#fbe300") }), -- Diff mode: Changed line |diff.txt|
 		-- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
 		-- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
 		-- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		-- TermCursor     { }, -- Cursor in a focused terminal
 		-- TermCursorNC   { }, -- Cursor in an unfocused terminal
-		ErrorMsg({ fg = "#ff0000" }), -- Error messages on the command line
+		ErrorMsg({ fg = hsl("#ff0000") }), -- Error messages on the command line
 		-- VertSplit      { }, -- Column separating vertically split windows
 		-- Folded         { }, -- Line used for closed folds
 		-- FoldColumn     { }, -- 'foldcolumn'
 		-- SignColumn     { }, -- Column where |signs| are displayed
 		-- IncSearch      { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-		Substitute({ bg = "#fcf6bd" }), -- |:substitute| replacement text highlighting
+		Substitute({ bg = hsl("#fcf6bd") }), -- |:substitute| replacement text highlighting
 		LineNr({ fg = "#ffffff" }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		LineNrAbove({ LineNr, gui = "italic" }), -- Line number for when the 'relativenumber' option is set, above the cursor line
 		LineNrBelow({ LineNrAbove }), -- Line number for when the 'relativenumber' option is set, below the cursor line
-		CursorLineNr({ fg = "#60b6fb" }), -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		CursorLineNr({ fg = hsl("#60b6fb") }), -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg({ bg = "#9a031e" }), -- 'showmode' message (e.g., "-- INSERT -- ")
-		MsgArea({ fg = "#000000", bg = "#ffffff" }), -- Area for messages and cmdline
+		MsgArea({ fg = hsl("#000000"), bg = hsl("#ffffff") }), -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		-- NonText({}), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -101,18 +101,18 @@ local theme = lush(function(injected_functions)
 		-- FloatBorder    {bg="#522888" }, -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
-		Pmenu({ bg = "#ffffff", fg = "#ea96df" }), -- Popup menu: Normal item.
-		PmenuSel({ bg = "#c670ff", fg = "#ffffff" }), -- Popup menu: Selected item.
-		PmenuKind({ bg = "#ffe5ec", fg = "#fb6f92" }), -- Popup menu: Normal item "kind"
+		Pmenu({ bg = hsl("#ffffff"), fg = hsl("#ea96df") }), -- Popup menu: Normal item.
+		PmenuSel({ bg = hsl("#c670ff"), fg = hsl("#ffffff") }), -- Popup menu: Selected item.
+		PmenuKind({ bg = hsl("#ffe5ec"), fg = hsl("#fb6f92") }), -- Popup menu: Normal item "kind"
 		-- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
 		-- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
-		PmenuSbar({ bg = "#b4ffff" }), -- Popup menu: Scrollbar.
+		PmenuSbar({ bg = hsl("#b4ffff") }), -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
 		-- Question       { }, -- |hit-enter| prompt and yes/no questions
 		-- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		Search({ bg = hsl("#fcf6bd"), fg = hsl("#ff99c8") }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-		SpecialKey({ fg = "#aacc00" }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+		SpecialKey({ fg = hsl("#aacc00") }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		-- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		-- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -123,7 +123,7 @@ local theme = lush(function(injected_functions)
 		-- TabLineFill    { }, -- Tab pages line, where there are no labels
 		-- TabLineSel     { }, -- Tab pages line, active tab page label
 		-- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
-		Visual({ bg = "#f9a620", fg = "#e9eaec" }), -- Visual mode selection
+		Visual({ bg = hsl("#9381ff"), fg = hsl("#e9eaec") }), -- Visual mode selection
 		-- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
 		-- WarningMsg     { }, -- Warning messages
 		Whitespace({ bg = Normal.bg.li(15), fg = Normal.bg }), -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -149,10 +149,10 @@ local theme = lush(function(injected_functions)
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		Identifier({ fg = "#4cc9f0" }), -- (*) Any variable name
-		Function({ fg = "#3f88c5" }), --   Function name (also: methods for classes)
+		Identifier({ fg = hsl("#4cc9f0") }), -- (*) Any variable name
+		Function({ fg = hsl("#3f88c5") }), --   Function name (also: methods for classes)
 
-		Statement({ fg = "#a594f9" }), -- (*) Any statement
+		Statement({ fg = hsl("#a594f9") }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
