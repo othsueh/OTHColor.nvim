@@ -285,7 +285,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@include"           { }, -- Include
 		-- sym"@preproc"           { }, -- PreProc
 		-- sym"@debug"             { }, -- Debug
-		-- sym"@tag"               { }, -- Tag
+		sym("@tag")({ fg = hsl("#b9375e") }), -- Tag
 	}
 end)
 
