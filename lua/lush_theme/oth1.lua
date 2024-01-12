@@ -175,7 +175,7 @@ local theme = lush(function(injected_functions)
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
 		Delimiter({ fg = hsl("#b9375e") }), --   Character that needs attention
-		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
+		SpecialComment({ fg = hsl("#b9375e") }), --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
