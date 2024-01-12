@@ -174,7 +174,7 @@ local theme = lush(function(injected_functions)
 		-- Special        { }, -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
-		-- Delimiter      { }, --   Character that needs attention
+		Delimiter({ fg = hsl("#b9375e") }), --   Character that needs attention
 		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
@@ -255,21 +255,21 @@ local theme = lush(function(injected_functions)
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
 		-- sym"@string"            { }, -- String
-		sym("@string.escape")({ fg = hsl("#b9375e") }), -- SpecialChar
-		sym("@string.special")({ fg = hsl("#b9375e") }), -- SpecialChar
+		-- sym"@string.escape"     { }, -- SpecialChar
+		-- sym"@string.special"    { }, -- SpecialChar
 		-- sym"@character"         { }, -- Character
 		-- sym"@character.special" { }, -- SpecialChar
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
 		-- sym"@function"          { }, -- Function
-		sym("@function.builtin")({ fg = hsl("#b9375e") }), -- Special
+		-- sym"@function.builtin"  { }, -- Special
 		-- sym"@function.macro"    { }, -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
 		-- sym"@property"          { }, -- Identifier
-		sym("@constructor")({ fg = hsl("#b9375e") }), -- Special
+		-- sym"@constructor"       { }, -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
 		-- sym"@label"             { }, -- Label
@@ -285,7 +285,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@include"           { }, -- Include
 		-- sym"@preproc"           { }, -- PreProc
 		-- sym"@debug"             { }, -- Debug
-		sym("@tag")({ fg = hsl("#b9375e") }), -- Tag
+		-- sym"@tag"               { }, -- Tag
 	}
 end)
 
